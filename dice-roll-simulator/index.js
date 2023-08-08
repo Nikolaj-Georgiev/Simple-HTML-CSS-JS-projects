@@ -1,5 +1,6 @@
 const dice = document.getElementById('dice');
 const rollHistory = document.getElementById('roll-history');
+const button = document.getElementById('roll-button');
 
 let historyList = [];
 const diceFaces = {
@@ -20,12 +21,15 @@ const rollDice = () => {
     updateRollHistory();
 }
 
-document.getElementById('roll-button').addEventListener('click', () => {
+button.addEventListener('click', () => {
     dice.classList.add('roll-animation');
+    button.disabled = true;
     setTimeout(() => {
         dice.classList.remove('roll-animation');
-        rollDice()
-    }, 1000)
+        rollDice();
+        button.disabled = false;
+    }, 1000);
+
 });
 
 function updateRollHistory() {
