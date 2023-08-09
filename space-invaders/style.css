@@ -1,0 +1,73 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 0;
+    background-image: url('./img/ESA_root_pillars.jpg');
+    background-size:cover;
+    background-origin:border-box;
+    background-repeat: no-repeat;
+}
+
+.grid {
+    margin:auto;
+    width: 300px;
+    height: 300px;
+    border: solid black 1px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid div {
+    width: 20px;
+    height: 20px;
+
+}
+
+.invader {
+    background-image: url('./img/images.jpg');
+    border-radius: 10px;
+    background-size:cover;
+    background-origin:border-box;
+    background-repeat: no-repeat;
+}
+
+.shooter {
+    background-image: url('./img/cartoon-spaceship-illustration-vector.jpg');
+    border-radius: 10px;
+    background-size:cover;
+    background-origin:border-box;
+    background-repeat: no-repeat;
+}
+
+.laser {
+    background-color: orange;
+    border-radius: 50px;
+}
+
+.boom {
+    background-color: red;
+}
+
+.results {
+   display: block;
+    text-align: center;
+    color: blanchedalmond;
+}
+
+.start{
+    display: inline;
+  text-align:center;
+    background-color: #47a5c4;
+    color: blanchedalmond;
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.start:hover{
+    background-color: #2e8baf;
+}
