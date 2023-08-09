@@ -10,8 +10,8 @@ body {
 
 .grid {
     margin:auto;
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     border: solid black 1px;
     display: flex;
     flex-wrap: wrap;

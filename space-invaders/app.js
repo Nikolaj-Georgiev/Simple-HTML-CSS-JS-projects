@@ -4,15 +4,15 @@ btn.addEventListener('click', () => location.reload());
 btn.disabled = true;
 const grid = document.querySelector('.grid');
 const resultsDisplay = document.querySelector('.results');
-let currentShooterIndex = 202;
-let width = 15;
+let currentShooterIndex = 587;
+let width = 25;
 let invadersId;
 let direction = 1;
 let goingRight = true;
 export let aliensRemoved = [];
 let result = 0;
 
-for (let i = 0; i < 225; i++) {
+for (let i = 0; i < 625; i++) {
     const square = document.createElement('div');
     grid.appendChild(square);
 }
@@ -20,9 +20,10 @@ for (let i = 0; i < 225; i++) {
 export const squares = [...document.querySelectorAll('.grid div')];
 
 export const alienInvaders = [
-    0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
-    15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
-    30, 31, 32, 33, 34, 35, 36, 37, 38, 39
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
+    25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
+    50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64,
+    75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89
 ];
 
 
@@ -88,10 +89,7 @@ function moveInvaders() {
         clearInterval(invadersId);
         btn.disabled = false;
     }
-
-
 }
-
 
 invadersId = setInterval(moveInvaders, 150);
 
