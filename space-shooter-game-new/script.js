@@ -83,11 +83,12 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     canvas.addEventListener('touchmove', (e) => {
+      e.preventDefault();
       mouse.x = e.touches[0].clientX;
       player.x = mouse.x - player.width / 2;
     });
 
-    canvas.addEventListener('touchstart', fire);
+    canvas.addEventListener('touchstart', fire, { passive: true });
 
     function collision(a, b) {
       return (
