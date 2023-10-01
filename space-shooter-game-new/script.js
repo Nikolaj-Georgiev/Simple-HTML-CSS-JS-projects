@@ -163,5 +163,4 @@ window.addEventListener('DOMContentLoaded', () => {
 
     updateGame();
   };
-  setInterval(fire, 1000);
 });
