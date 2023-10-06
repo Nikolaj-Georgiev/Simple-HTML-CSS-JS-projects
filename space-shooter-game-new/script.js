@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
+  let gameOver = false;
   const canvas = document.querySelector('canvas');
   const ctx = canvas.getContext('2d');
   canvas.width = window.innerWidth;
@@ -16,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
     height: 32,
   };
   const playerImage = new Image();
-  playerImage.src = '/heroShip.png';
+  playerImage.src = './heroShip.png';
 
   playerImage.onload = () => { // Wait for the player's image to load
     const bullets = [];
@@ -39,7 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
           speed: speed,
           image: new Image(),
         };
-        enemy.image.src = '/enemy-fotor.png';
+        enemy.image.src = './enemy-fotor.png';
         enemies.push(enemy);
       }
     }
@@ -58,12 +59,12 @@ window.addEventListener('DOMContentLoaded', () => {
           speed: speed,
           image: new Image(),
         };
-        healthKit.image.src = '/first-aid-kit.png';
+        healthKit.image.src = './first-aid-kit.png';
         healthKits.push(healthKit);
       }
     }
     setInterval(spawnHealthKits, 10000);
-    setInterval(fire, 300);
+    setInterval(fire, 250);
 
     function fire() {
       const bullet = {
@@ -100,62 +101,72 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateGame() {
-      requestAnimationFrame(updateGame);
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = 'white';
-      ctx.font = '1em Arial';
-      ctx.fillText('Health: ' + health, 5, 20);
-      ctx.fillText('Score: ' + score, canvas.width - 100, 20);
-
-      ctx.drawImage(playerImage, player.x, player.y);
-
-      for (let i = bullets.length - 1; i >= 0; i--) {
-        bullets[i].y -= bullets[i].speed;
+      if (!gameOver) {
+        requestAnimationFrame(updateGame);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = 'white';
-        ctx.fillRect(bullets[i].x, bullets[i].y, bullets[i].width, bullets[i].height);
-        if (bullets[i].y < 0) {
-          bullets.splice(i, 1);
-        }
-      }
+        ctx.font = '1em Arial';
+        ctx.fillText('Health: ' + health, 5, 20);
+        ctx.fillText('Score: ' + score, canvas.width - 100, 20);
 
-      for (let i = enemies.length - 1; i >= 0; i--) {
-        enemies[i].y += enemies[i].speed;
-        ctx.drawImage(enemies[i].image, enemies[i].x, enemies[i].y);
-        if (enemies[i].y > canvas.height) {
-          enemies.splice(i, 1);
-          health -= 10;
-          if (health === 0) {
-            alert('You LOST!\nYour score was ' + score);
-            location.reload(); // Restart the game
+        ctx.drawImage(playerImage, player.x, player.y);
+
+        for (let i = bullets.length - 1; i >= 0; i--) {
+          bullets[i].y -= bullets[i].speed;
+          ctx.fillStyle = 'white';
+          ctx.fillRect(bullets[i].x, bullets[i].y, bullets[i].width, bullets[i].height);
+          if (bullets[i].y < 0) {
+            bullets.splice(i, 1);
           }
         }
-      }
 
-      for (let i = enemies.length - 1; i >= 0; i--) {
-        for (let j = bullets.length - 1; j >= 0; j--) {
-          if (collision(enemies[i], bullets[j])) {
+        for (let i = enemies.length - 1; i >= 0; i--) {
+          enemies[i].y += enemies[i].speed;
+          ctx.drawImage(enemies[i].image, enemies[i].x, enemies[i].y);
+
+          if (collision(enemies[i], player)) {
             enemies.splice(i, 1);
-            bullets.splice(j, 1);
-            score++;
+            health -= 10;
+            if (health <= 0) {
+              console.log(health);
+              ctx.fillText('Health: 0', 5, 20);
+              gameOver = true;
+              alert('You LOST!\nYour score was ' + score);
+              location.reload();
+            }
           }
         }
-      }
 
-      for (let i = healthKits.length - 1; i >= 0; i--) {
-        healthKits[i].y += healthKits[i].speed;
-        ctx.drawImage(healthKits[i].image, healthKits[i].x, healthKits[i].y);
-        if (collision(healthKits[i], player)) {
-          healthKits.splice(i, 1);
-          health += 10;
+
+        const enemyCopy = [...enemies];
+        const bulletCopy = [...bullets];
+
+        for (let i = enemyCopy.length - 1; i >= 0; i--) {
+          for (let j = bulletCopy.length - 1; j >= 0; j--) {
+            if (collision(enemyCopy[i], bulletCopy[j])) {
+              enemies.splice(i, 1);
+              bullets.splice(j, 1);
+              score++;
+            }
+          }
         }
-      }
 
-      for (let i = healthKits.length - 1; i >= 0; i--) {
-        for (let j = bullets.length - 1; j >= 0; j--) {
-          if (collision(healthKits[i], bullets[j])) {
+        for (let i = healthKits.length - 1; i >= 0; i--) {
+          healthKits[i].y += healthKits[i].speed;
+          ctx.drawImage(healthKits[i].image, healthKits[i].x, healthKits[i].y);
+          if (collision(healthKits[i], player)) {
             healthKits.splice(i, 1);
-            bullets.splice(j, 1);
             health += 10;
+          }
+        }
+
+        for (let i = healthKits.length - 1; i >= 0; i--) {
+          for (let j = bullets.length - 1; j >= 0; j--) {
+            if (collision(healthKits[i], bullets[j])) {
+              healthKits.splice(i, 1);
+              bullets.splice(j, 1);
+              health += 10;
+            }
           }
         }
       }
