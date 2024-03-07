@@ -3,12 +3,13 @@ $color-primary-light: #a9d6ff;
 $color-primary: #69b7ff;
 $color-primary-dark: #2998ff;
 
-$color-secondary-light: #ffb900;
-$color-secondary-dark: #ff7730;
+$color-secondary: #fa5252;
+$color-secondary-light: #fb6363;
+$color-secondary-dark: #c84242;
 
-$color-tertiary-light: #69b7ff;
-$color-tertiary: #2998ff;
-$color-tertiary-dark: #1d6ab3;
+$color-tertiary-light: #fff3bf;
+$color-tertiary: #fff3bf;
+$color-tertiary-dark: #807a60;
 
 $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
@@ -22,18 +23,18 @@ $color-black: #000;
 
 $color-card-1: linear-gradient(
   to bottom right,
-  $color-secondary-light,
-  $color-secondary-dark
+  $color-tertiary-light,
+  $color-tertiary-dark
 );
 $color-card-2: linear-gradient(
   to bottom right,
-  $color-primary-light,
-  $color-primary-dark
+  $color-secondary-light,
+  $color-secondary-dark
 );
 $color-card-3: linear-gradient(
   to bottom right,
-  $color-tertiary-light,
-  $color-tertiary-dark
+  $color-primary-light,
+  $color-primary-dark
 );
 
 //FONT
