@@ -53,13 +53,29 @@
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
     &--1 {
-      background-image: $color-card-1, url('../img/nat-5.jpg');
+      background-image: $color-card-1, url('../img/treck-small.webp');
+
+      @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+        only screen and (-webkit-min-device-pixel-ration: 2) and (min-width: 37.5em),
+        only screen and (min-width: 125em) {
+        background-image: $color-card-1, url('../img/treck-large.webp');
+      }
     }
     &--2 {
-      background-image: $color-card-2, url('../img/nat-6.jpg');
+      background-image: $color-card-2, url('../img/new-ninja-small.webp');
+      @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+        only screen and (-webkit-min-device-pixel-ration: 2) and (min-width: 37.5em),
+        only screen and (min-width: 125em) {
+        background-image: $color-card-2, url('../img/new-ninja-large.webp');
+      }
     }
     &--3 {
-      background-image: $color-card-3, url('../img/nat-7.jpg');
+      background-image: $color-card-3, url('../img/new-heli-small.webp');
+      @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+        only screen and (-webkit-min-device-pixel-ration: 2) and (min-width: 37.5em),
+        only screen and (min-width: 125em) {
+        background-image: $color-card-3, url('../img/new-heli-large.webp');
+      }
     }
   }
 
