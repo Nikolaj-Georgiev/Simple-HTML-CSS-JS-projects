@@ -803,7 +803,7 @@ body {
 
 .header {
   height: 85vh;
-  background-image: linear-gradient(to right bottom, rgba(169, 214, 255, 0.8), rgba(41, 152, 255, 0.8)), url(../img/hero-small.jpg);
+  background-image: linear-gradient(to right bottom, rgba(169, 214, 255, 0.8), rgba(41, 152, 255, 0.8)), url(../img/hero-small.webp);
   background-size: cover;
   background-position: top;
   position: relative; }
@@ -814,7 +814,7 @@ body {
       clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); } }
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ration: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
     .header {
-      background-image: linear-gradient(to right bottom, rgba(169, 214, 255, 0.8), rgba(41, 152, 255, 0.8)), url(../img/hero.jpg); } }
+      background-image: linear-gradient(to right bottom, rgba(169, 214, 255, 0.8), rgba(41, 152, 255, 0.8)), url(../img/hero.webp); } }
   @media only screen and (max-width: 56.25em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
