@@ -1,0 +1,51 @@
+// COLORS
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-card-1: linear-gradient(
+  to bottom right,
+  $color-secondary-light,
+  $color-secondary-dark
+);
+$color-card-2: linear-gradient(
+  to bottom right,
+  $color-primary-light,
+  $color-primary-dark
+);
+$color-card-3: linear-gradient(
+  to bottom right,
+  $color-tertiary-light,
+  $color-tertiary-dark
+);
+
+//FONT
+$default-font-size: 1.6rem;
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+//margins
+$small: 1.5rem;
+$medium: 4rem;
+$big: 8rem;
+$huge: 10rem;

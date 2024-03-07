@@ -1,0 +1,65 @@
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+@mixin center-horizontal-vertical {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERY MANAGER
+/*
+0-600px:     Phone
+600-900px:   Tablet portrait mode
+900-1200px:  Tablet in landscape
+[where our normal styles apply]
+1800px + :  Big desktop screens
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+
+// ORDER: Base + typography > general layout + grid > page layout > components
+
+// 1em == 16px for the media queries. And 16px is the default browser font-size. If user goes for 20px then 1em == 20px etc.
+// only screen and -> this means that they only apply to screens, if someone tries to print it, the media query won's apply
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      //600px;
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    //900px;
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    //1200px;
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    //1800px;
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
