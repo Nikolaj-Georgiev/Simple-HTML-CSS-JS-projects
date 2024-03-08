@@ -13,3 +13,6 @@ This is a repo where I am collecting simple projects that I've made to practice 
 - There is a slow auto shoot but you can shoot additionaly with the left mouse button or (if you use it on mobile device) with thouch.
 - It's easy to make more score on smaller screens beacause the number of enemies grows with the screen :)
 - There are some flaws in the design but this is my first project with canvas, and I know that it's not perfect, but it's fun! :)
+
+4. Winters. -> Landing page for a winter tours company. You can check it here: https://winters-ngn.netlify.app
+- This project is build with advanced CSS techniques using SCSS
