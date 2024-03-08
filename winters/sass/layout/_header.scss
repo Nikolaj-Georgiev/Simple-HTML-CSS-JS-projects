@@ -30,13 +30,17 @@
       url(../img/hero.webp);
   }
 
-  @include respond(tab-port) {
+  @include respond(tab-land) {
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
   }
+  @include respond(tab-port) {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+  }
   @include respond(phone) {
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95%);
   }
 
   &__logo-box {

@@ -828,14 +828,18 @@ body {
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ration: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(169, 214, 255, 0.8), rgba(41, 152, 255, 0.8)), url(../img/hero.webp); } }
+  @media only screen and (max-width: 78.75em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%); } }
   @media only screen and (max-width: 56.25em) {
     .header {
-      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
-      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%); } }
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%); } }
   @media only screen and (max-width: 37.5em) {
     .header {
-      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
-      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%); } }
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95%);
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95%); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
