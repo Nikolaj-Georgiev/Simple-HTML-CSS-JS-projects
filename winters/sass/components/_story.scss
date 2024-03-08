@@ -7,7 +7,7 @@
   padding: 6rem;
   padding-left: 9rem;
   font-size: $default-font-size;
-  transform: skewX(-12deg);
+  transform: skewX(12deg);
   position: relative;
 
   @include respond(tab-port) {
@@ -24,7 +24,7 @@
     width: 15rem;
     height: 15rem;
     float: left;
-    transform: translateX(-3rem) skewX(12deg);
+    transform: translateX(-3rem) skewX(-12deg);
     position: relative;
     overflow: hidden;
     border-radius: 50%;
@@ -53,7 +53,7 @@
   }
 
   &__text {
-    transform: skewX(12deg);
+    transform: skewX(-12deg);
     @include respond(phone) {
       transform: skewX(0);
     }

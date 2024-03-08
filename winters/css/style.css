@@ -675,7 +675,7 @@ body {
   padding: 6rem;
   padding-left: 9rem;
   font-size: 1.6rem;
-  transform: skewX(-12deg);
+  transform: skewX(12deg);
   position: relative; }
   @media only screen and (max-width: 56.25em) {
     .story {
@@ -689,7 +689,7 @@ body {
     width: 15rem;
     height: 15rem;
     float: left;
-    transform: translateX(-3rem) skewX(12deg);
+    transform: translateX(-3rem) skewX(-12deg);
     position: relative;
     overflow: hidden;
     border-radius: 50%; }
@@ -710,7 +710,7 @@ body {
     transform: translateX(-4rem) scale(1.4);
     backface-visibility: hidden; }
   .story__text {
-    transform: skewX(12deg); }
+    transform: skewX(-12deg); }
     @media only screen and (max-width: 37.5em) {
       .story__text {
         transform: skewX(0); } }
