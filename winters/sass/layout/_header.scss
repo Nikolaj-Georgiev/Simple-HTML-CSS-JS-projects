@@ -13,8 +13,8 @@
 
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
     height: 95vh;
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
   }
   //192dpi (dots per inch is the resolution for Apple retina screen)
   //the comma (',') is like 'or' in the media query

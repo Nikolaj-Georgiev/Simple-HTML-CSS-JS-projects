@@ -1,5 +1,7 @@
 .feature-box {
   background-color: rgba($color-white, 0.8);
+  width: 25rem;
+  height: 30rem;
   padding: 2.5rem;
   font-size: 1.5rem;
   text-align: center;
@@ -9,6 +11,8 @@
 
   @include respond(tab-port) {
     padding: 2rem;
+    width: auto;
+    height: auto;
   }
 
   &__icon {

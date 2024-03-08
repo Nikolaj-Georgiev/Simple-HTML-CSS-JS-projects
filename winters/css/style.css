@@ -1,7 +1,7 @@
 /*
 0-600px:     Phone
 600-900px:   Tablet portrait mode
-900-1200px:  Tablet in landscape
+900-1260px:  Tablet in landscape
 [where our normal styles apply]
 1800px + :  Big desktop screens
 
@@ -56,7 +56,7 @@ $breakpoint argument choices:
 
 html {
   font-size: 62.5%; }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 78.75em) {
     html {
       font-size: 56.25%; } }
   @media only screen and (max-width: 56.25em) {
@@ -435,6 +435,8 @@ body {
 
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
+  width: 25rem;
+  height: 30rem;
   padding: 2.5rem;
   font-size: 1.5rem;
   text-align: center;
@@ -443,7 +445,9 @@ body {
   transition: transform 0.3s; }
   @media only screen and (max-width: 56.25em) {
     .feature-box {
-      padding: 2rem; } }
+      padding: 2rem;
+      width: auto;
+      height: auto; } }
   .feature-box__icon {
     font-size: 6rem;
     margin-bottom: 0.5rem;
@@ -819,8 +823,8 @@ body {
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
     .header {
       height: 95vh;
-      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
-      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%); } }
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%); } }
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ration: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(169, 214, 255, 0.8), rgba(41, 152, 255, 0.8)), url(../img/hero.webp); } }
@@ -980,7 +984,7 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 78.75em) {
     .section-about {
       margin-top: -15vh;
       padding: 20rem 0 20rem 0; } }
@@ -997,9 +1001,9 @@ body {
   background-image: linear-gradient(to right bottom, rgba(169, 214, 255, 0.8), rgba(41, 152, 255, 0.8)), url(../img/schtilthorn.webp);
   background-size: cover;
   margin-top: -10rem;
-  transform: skewY(8deg); }
+  transform: skewY(7deg); }
   .section-features > * {
-    transform: skewY(-8deg); }
+    transform: skewY(-7deg); }
 
 .section-tours {
   background-color: #f7f7f7;
@@ -1029,7 +1033,7 @@ body {
   background-size: 100%;
   border-radius: 0.3rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 78.75em) {
     .book {
       background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/book.webp);
       background-size: cover; } }
@@ -1039,7 +1043,7 @@ body {
   .book__form {
     width: 50%;
     padding: 6rem; }
-    @media only screen and (max-width: 75em) {
+    @media only screen and (max-width: 78.75em) {
       .book__form {
         width: 65%; } }
     @media only screen and (max-width: 56.25em) {
