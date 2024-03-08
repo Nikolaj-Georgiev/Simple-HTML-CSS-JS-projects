@@ -3,8 +3,14 @@
   padding: 25rem 0;
   margin-top: -20vh;
 
+  @include respond(tab-land) {
+    margin-top: -15vh;
+    padding: 20rem 0 20rem 0;
+  }
+
   @include respond(tab-port) {
-    padding: 15rem 0 20rem 0;
+    padding: 20rem 0 25rem 0;
+    margin-bottom: -10vh;
   }
 
   @include respond(phone) {
@@ -26,14 +32,10 @@
 
   margin-top: -10rem;
 
-  transform: skewY(-7deg);
+  transform: skewY(8deg);
 
   & > * {
-    transform: skewY(7deg);
-  }
-
-  @include respond(tab-port) {
-    padding: 10rem 0;
+    transform: skewY(-8deg);
   }
 }
 
