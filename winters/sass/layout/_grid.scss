@@ -10,6 +10,12 @@
     }
   }
   //selects everything except the last child
+
+  @include respond(desktop) {
+    // max-width: 50rem;
+    padding: 0 2rem;
+    padding-left: 3rem;
+  }
   @include respond(tab-land) {
     // max-width: 50rem;
     padding: 0 2rem;

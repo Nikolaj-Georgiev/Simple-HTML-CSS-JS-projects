@@ -793,6 +793,10 @@ body {
     @media only screen and (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
+  @media only screen and (max-width: 90em) {
+    .row {
+      padding: 0 2rem;
+      padding-left: 3rem; } }
   @media only screen and (max-width: 78.75em) {
     .row {
       padding: 0 2rem; } }
