@@ -23,6 +23,10 @@
     display: table;
     width: 75%;
 
+    @include respond(tab-land) {
+      width: 80%;
+    }
+
     @include respond(tab-port) {
       width: 85%;
     }
@@ -41,12 +45,15 @@
     width: 33.33333%;
     display: table-cell;
 
-    @include respond(tab-port) {
+    @include respond(tab-land) {
       width: 40%;
+    }
+    @include respond(tab-port) {
+      width: 51%;
     }
 
     @include respond(phone) {
-      width: 51%;
+      width: 0%;
     }
   }
 
@@ -56,14 +63,18 @@
     vertical-align: middle;
     padding: 3rem 5rem;
 
-    @include respond(tab-port) {
+    @include respond(tab-land) {
       width: 60%;
       padding: 2rem 3rem;
       line-height: 1.5;
     }
-    @include respond(phone) {
+    @include respond(tab-port) {
       padding: 1rem 2rem;
       width: 49%;
+    }
+
+    @include respond(phone) {
+      width: 100%;
     }
   }
 
