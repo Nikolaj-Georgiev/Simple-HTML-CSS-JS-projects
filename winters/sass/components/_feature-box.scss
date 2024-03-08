@@ -9,6 +9,18 @@
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
   transition: transform 0.3s;
 
+  @include respond(desktop) {
+    padding: 2rem;
+    width: 23rem;
+    height: 30;
+  }
+
+  @include respond(tab-land) {
+    padding: 2rem;
+    width: 22rem;
+    height: 30;
+  }
+
   @include respond(tab-port) {
     padding: 2rem;
     width: auto;

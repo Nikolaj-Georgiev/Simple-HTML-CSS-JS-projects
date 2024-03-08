@@ -9,6 +9,7 @@ $breakpoint argument choices:
 - phone
 - tab-port
 - tab-land
+- desktop
 - big-desktop
 */
 @keyframes moveInLeft {
@@ -443,6 +444,16 @@ body {
   border-radius: 0.3rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform 0.3s; }
+  @media only screen and (max-width: 90em) {
+    .feature-box {
+      padding: 2rem;
+      width: 23rem;
+      height: 30; } }
+  @media only screen and (max-width: 78.75em) {
+    .feature-box {
+      padding: 2rem;
+      width: 22rem;
+      height: 30; } }
   @media only screen and (max-width: 56.25em) {
     .feature-box {
       padding: 2rem;
@@ -782,6 +793,9 @@ body {
     @media only screen and (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
+  @media only screen and (max-width: 78.75em) {
+    .row {
+      padding: 0 2rem; } }
   @media only screen and (max-width: 56.25em) {
     .row {
       max-width: 50rem;
@@ -790,6 +804,9 @@ body {
     float: left; }
     .row [class^='col-']:not(:last-child) {
       margin-right: 6rem; }
+      @media only screen and (max-width: 90em) {
+        .row [class^='col-']:not(:last-child) {
+          margin-right: 5rem; } }
       @media only screen and (max-width: 56.25em) {
         .row [class^='col-']:not(:last-child) {
           margin-right: 0;

@@ -30,6 +30,7 @@ $breakpoint argument choices:
 - phone
 - tab-port
 - tab-land
+- desktop
 - big-desktop
 */
 
@@ -53,6 +54,12 @@ $breakpoint argument choices:
   @if $breakpoint == tab-land {
     //1260px;
     @media only screen and (max-width: 78.75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    //1440px;
+    @media only screen and (max-width: 90em) {
       @content;
     }
   }
