@@ -12,7 +12,10 @@ This is a repo where I am collecting simple projects that I've made to practice 
 - The game is made to be used on any device.
 - There is a slow auto shoot but you can shoot additionaly with the left mouse button or (if you use it on mobile device) with thouch.
 - It's easy to make more score on smaller screens beacause the number of enemies grows with the screen :)
-- There are some flaws in the design but this is my first project with canvas, and I know that it's not perfect, but it's fun! :)
+- There are some flaws in the design but this is my first project with canvas, and I know that it's not perfect, but I hope it's fun! :)
 
 4. Winters. -> Landing page for a winter tours company. You can check it here: https://winters-ngn.netlify.app
 - This project is build with advanced CSS techniques using SCSS
+
+5. Omnifood. -> Landing page for a food company. You can check it here: https://omnifood-ng.netlify.app
+- This project is build with pure CSS and a few lines of JS
