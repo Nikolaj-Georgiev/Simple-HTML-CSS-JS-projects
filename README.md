@@ -1,21 +1,49 @@
-This is a repo where I am collecting simple projects that I've made to practice and develope my coding skills
+# Simple Projects Portfolio
 
-1. Roll-Dice-Simulator you can check here: https://dice-roll-sim.netlify.app
+Welcome to my repository where I collect simple projects that I have created to practice and develop my coding skills. Below you can find details and links to each project.
 
-2. Space Invaders. You can check them here: https://space-invaders-basic.netlify.app
-- Have in mind:
-- The game starst directly. The button is to restart it when it's over.
-- You can move your spaceship with left and right arrow on the keyboard and shoot with the space button.
-- The game is not phone friendly. :( (yet)
+## Projects
 
-3. Space Ivaders 2 :) You can check the new version here: https://space-invaders-gnikolay.netlify.app
-- The game is made to be used on any device.
-- There is a slow auto shoot but you can shoot additionaly with the left mouse button or (if you use it on mobile device) with thouch.
-- It's easy to make more score on smaller screens beacause the number of enemies grows with the screen :)
-- There are some flaws in the design but this is my first project with canvas, and I know that it's not perfect, but I hope it's fun! :)
+### [Roll Dice Simulator](https://dice-roll-sim.netlify.app)
+A simple dice roll simulator that generates random dice rolls with a click of a button.
 
-4. Winters. -> Landing page for a winter tours company. You can check it here: https://winters-ngn.netlify.app
-- This project is build with advanced CSS techniques using SCSS
+### [Space Invaders](https://space-invaders-basic.netlify.app)
+A basic version of the classic Space Invaders game.
 
-5. Omnifood. -> Landing page for a food company. You can check it here: https://omnifood-ng.netlify.app
-- This project is build with pure CSS and a few lines of JS
+**How to Play:**
+- The game starts automatically.
+- Use the left and right arrow keys on your keyboard to move the spaceship.
+- Press the space bar to shoot.
+- **Note:** The game is not optimized for mobile devices.
+
+### [Space Invaders 2](https://space-invaders-gnikolay.netlify.app)
+An updated version of the Space Invaders game, designed to be played on any device.
+
+**Features:**
+- Slow auto-shoot functionality.
+- Additional shooting with the left mouse button or by touch on mobile devices.
+- Scoring is easier on smaller screens due to the increased number of enemies.
+
+**Known Issues:**
+- Some design flaws exist, but this is my first project using the canvas element. Despite the imperfections, I hope it's enjoyable!
+
+### [Winters](https://winters-ngn.netlify.app)
+A home page designed for a winter tours company.
+
+**Tech Stack:**
+- Built using advanced CSS techniques with SCSS.
+
+### [Omnifood](https://omnifood-ng.netlify.app)
+A home page for a food delivery company.
+
+**Tech Stack:**
+- Built with pure CSS and a few lines of JavaScript.
+
+## Notes
+
+- All projects are hosted on Netlify for easy access.
+- Feedback and contributions are welcome!
+
+---
+
+Thank you for taking the time to explore my projects. If you have any suggestions or improvements, feel free to reach out or submit an issue.
